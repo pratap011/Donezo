@@ -62,9 +62,9 @@ To create a platform where users can manage and track their progress across vari
 
 ---
 
-## 4. Timeline and Milestones  
+## 4. Milestones  
 
 - **Phase 1:** Basic platform with login, tag selection, list management, tracking, and custom tags.
 - **Phase 2:** Add dashboard analytics.
-- **Phase 3:** Implement recommendation engine and custom tags (2 months).
+- **Phase 3:** Implement recommendation engine and custom tags.
 
