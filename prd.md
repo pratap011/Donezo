@@ -21,16 +21,21 @@ To create a platform where users can manage and track their progress across vari
 ## 2. Key Features  
 
 ### User Authentication  
-- Login/Signup using email or social media.
+- Login/Signup using email or social media (Google, X).
 
-### Tag Selection  
-- Predefined tags (e.g., Movies, TV Shows, Podcasts, Games, Skills).
-- Ability to create custom tags.
-
-### List Management  
-- Add items (e.g., TV shows, games) to a personalized list.
+### List Management
+- Predefined Lists available (e.g., Movies, TV Shows, Podcasts, Games, Anime, ...)
+- User can create custom lists
+- Add items
+  - Search for Items by name (e.g. tv shows)
+  - System searches database / api to display matches
+  - User selects and adds the item
+  - User should be able to add an item even if the database / api does not provide a match
 - Track progress (e.g., completed episodes, levels, or chapters).
-- Mark items as "Completed" or "In Progress."
+  - User can mark items as completed. (by default it is pending)
+  - For episodic / subitems, User can mark complete upto an episode / subitem (This assumes an ordered list of subitems)
+- User can view completion percentage for a list
+- When viewing a list, user is shown pending items only and also items which have a higher percentage completion to be shown on top
 
 ### Dashboard Analytics  
 - Visualize activity data such as:
@@ -38,6 +43,8 @@ To create a platform where users can manage and track their progress across vari
   - Genres watched or played.
   - Time spent on activities.
   - Monthly insights.
+  - Hours / days left for 100% completion (actual watchtime)
+  - Estimated time to complete (e.g based on hours spent historically)
 
 ### Recommendations  
 - Suggest items to watch, play, or learn based on:
