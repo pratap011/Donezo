@@ -1,10 +1,4 @@
-## User Journey for Adding an Item to the List
-
-<img width="907" alt="image" src="https://github.com/user-attachments/assets/b5b4c189-a28f-4142-ade4-1c1d3a80fd20" />
-
-## Sample ER Diagram 
-
-<img width="907" alt="image" src="https://github.com/user-attachments/assets/66c2865c-8bb1-4e24-bd13-965f85c1b8c8" />
+## DB Schema 
 
 ```mermaid
 erDiagram
@@ -23,6 +17,8 @@ erDiagram
         string name
         int completed_item_count
         int total_item_count
+        int completed_duration "minutes"
+        int total_duration "minutes"
         string image_url
         string user_id "FK"
         int created_on
@@ -39,12 +35,24 @@ erDiagram
         int completed_episodes
         int total_episodes
         float completed_percentage
+        int completed_duration "minutes"
+        int total_duration "minutes"
         string[] tags
         string list_id "FK"
         int created_on
         int updated_on
     }
 
+    ItemHistory {
+        string id "PK"
+        string status "PENDING,DONE"
+        int delta_completed_episodes
+        int delta_duration
+        string item_id
+        int created_on
+    }
+
     User ||--|{ List : has
     List ||--o{ Item : has
+    Item ||--o{ ItemHistory : has
 ```
